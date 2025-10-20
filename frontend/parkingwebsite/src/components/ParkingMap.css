@@ -1,0 +1,283 @@
+/* Parking Map Styles */
+.parking-layout-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.parking-map-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.parking-map-title h2 {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.map-legend {
+    display: flex;
+    gap: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+
+.legend-color.available {
+    background-color: #4CAF50;
+}
+
+.legend-color.occupied {
+    background-color: #F44336;
+}
+
+.parking-layout {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.parking-side {
+    margin: 15px 0;
+}
+
+.side-label {
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.parking-spots-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 120px;
+}
+
+.parking-spot {
+    width: 85px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.parking-spot:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.spot-animate {
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.available {
+    background: linear-gradient(135deg, #4CAF50, #66BB6A);
+}
+
+.occupied {
+    background: linear-gradient(135deg, #F44336, #EF5350);
+}
+
+.spot-number {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.spot-status {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.remove-spot-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    border: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.parking-spot:hover .remove-spot-btn {
+    opacity: 1;
+}
+
+.remove-spot-btn:hover {
+    background: #e74c3c;
+    transform: scale(1.1);
+}
+
+.road-area {
+    height: 60px;
+    background: #34495e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
+.road-line {
+    height: 2px;
+    background: white;
+    flex-grow: 1;
+    opacity: 0.3;
+}
+
+.entrance {
+    background: #f1c40f;
+    color: #2c3e50;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin: 0 15px;
+    min-width: 100px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Admin controls */
+.parking-controls {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.control-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.spot-input {
+    padding: 10px 15px;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    flex-grow: 1;
+    max-width: 200px;
+    transition: border 0.3s;
+}
+
+.spot-input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.side-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.side-btn {
+    padding: 8px 20px;
+    background: #ecf0f1;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #7f8c8d;
+    transition: all 0.3s;
+}
+
+.side-btn.active {
+    background: #3498db;
+    color: white;
+}
+
+.add-spot-btn {
+    padding: 12px 25px;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 15px;
+}
+
+.add-spot-btn:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(46, 204, 113, 0.3);
+}
+
+.add-spot-btn:disabled {
+    background: #bdc3c7;
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.spots-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.counter-bubble {
+    background: #3498db;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

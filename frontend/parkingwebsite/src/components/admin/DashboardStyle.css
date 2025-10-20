@@ -1,0 +1,21 @@
+.flex-grow-1.p-4{
+    background-color: rgb(212, 224, 238);
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    height: 100vh;
+    overflow-y: auto;
+}
+.chart-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.chart-container {
+    height: 250px;
+    margin-top: 15px;
+}

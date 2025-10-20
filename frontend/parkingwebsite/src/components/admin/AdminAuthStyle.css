@@ -1,0 +1,11 @@
+.card{
+    margin-right: 10px;
+}
+.btn-primary{
+    background-color: rgb(216, 82, 82);
+    border-color: rgb(216, 82, 82);
+}
+.btn-primary:hover{
+    background-color: rgb(237, 159, 159);
+    border-color: rgb(216, 82, 82);
+}

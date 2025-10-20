@@ -1,0 +1,100 @@
+.table-container {
+    max-height: 400px; 
+    overflow-y: auto; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.table thead tr {
+    background-color: #007bff;
+    color: #ffffff;
+    position: sticky; 
+    top: 0;
+    z-index: 1; 
+}
+
+.table th {
+    background-color: black;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    height: 10px;
+}
+.table td {
+    padding: 5px 5px 5px;
+    text-align: left;
+    height: 10px;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #007bff;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn-warning img {
+    width: 24px; 
+    height: 24px; 
+    margin-right: 8px; 
+}
+
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px; 
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.page-button:hover {
+    background-color: #0056b3;
+}
+
+.page-button.active {
+    background-color: #0056b3;
+    font-weight: bold;
+}

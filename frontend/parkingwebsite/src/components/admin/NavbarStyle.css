@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.custom-navbar-container {
+    background-color: #000;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.navbar-content {
+    padding: 21px;
+    flex-grow: 1;
+}
+
+.title-navbar {
+    padding-bottom: 40px;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.nav {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-item {
+    width: 100%;
+    margin-bottom: 0px;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-item:hover {
+    background-color: #333;
+}
+
+.nav-link {
+    width: 100%;
+    text-align: left;
+    font-size: 16.8px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.logout-section {
+    padding: 20px;
+    border-top: 1px solid #333;
+    background-color: #000;
+}
+
+.logout-btn {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: #333;
+}
+
+.custom-navbar-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.custom-navbar-container::-webkit-scrollbar-track {
+    background: #000;
+}
+
+.custom-navbar-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 10px;
+}
+
+.custom-navbar-container::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
