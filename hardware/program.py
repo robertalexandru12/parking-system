@@ -242,7 +242,7 @@ try:
                 print("Locul A2 eliberat. Trimis isUsed=false.")
                 spot_a2_ocupat = False
             except Exception as e:
-                print(f"⚠️ Eroare PUT eliberare A2: {e}")
+                print(f"Eroare PUT eliberare A2: {e}")
          
         if dist5 < 5 and not spot_a3_ocupat:
             try:
